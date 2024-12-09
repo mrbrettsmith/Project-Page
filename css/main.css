@@ -369,24 +369,37 @@ nav {
 }
 
 /* Three Column */
-.trio {
+
+.trioContainer {
     display: flex;
-    gap: 2em;
-    padding: 1em 0;
-    flex: auto;
+
 }
 
+.trio {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    padding: 1em 0;
+}
 
+.trioImageContainer {
+    display: flex;
+    flex: 1 1 33%;
+}
+
+.trioTextContainer {
+    flex: 1 1 33%;
+    display: block;
+}
 
 .trio img {
+    flex: auto;
     height: 100%;
     width: 100%;
-    flex: auto;
 }
 
 .trio p {
-    width: 100%;
-    flex:  auto; 
+
     font-family: 'proxima-soft';
     font-weight: 500;
     font-size: 1.25rem;
