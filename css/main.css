@@ -373,8 +373,10 @@ nav {
     display: flex;
     gap: 2em;
     padding: 1em 0;
-    
+    flex: auto;
 }
+
+
 
 .trio img {
     height: 100%;
