@@ -7,6 +7,12 @@
     --forest: #6BA95C;
     --black: #000000;
     --white: #ffffff;
+    --logoW: clamp(1.75rem, 8vw, 3rem);
+    --logoH: 83%;
+    --titleW: clamp(1.5rem, 3vw, 2rem);
+    --titleH: 87%;
+    --itemW: clamp(1rem, 2.5vw, 1.25rem);
+    --itemH: 90%;
 }
 
 /* UNIVERSAL */
@@ -92,8 +98,8 @@ a {
 h1 {
     font-family: 'proxima-soft';
     font-weight: 800;
-    font-size: 3rem;
-    line-height: 2.5rem;
+    font-size: var(--logoW);
+    line-height: var(--logoH);
     width: min-content;
     margin: .5rem;
 }
@@ -102,8 +108,8 @@ h1 {
 h4 {
     font-family: 'proxima-soft';
     font-weight: 800;
-    font-size: 2rem;
-    line-height: 1.8rem;
+    font-size: var(--titleW);
+    line-height: var(--titleH);
     width: min-content;
     margin: .5rem;
 }
@@ -121,8 +127,8 @@ h2 {
 h3 {
     font-family: 'proxima-soft';
     font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.1rem;
+    font-size: var(--itemW);
+    line-height: var(--itemH);
     width: min-content;
     margin: 1rem;
 }
@@ -217,7 +223,7 @@ nav {
     width: 100%;
     flex: 1 1 35%;
     padding-bottom: 1rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .logo {
@@ -238,10 +244,14 @@ nav {
     color: black;
     text-decoration: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    display: flex;
     list-style-type: none;
+}
+
+.nav-items a {
+    
 }
 
 /* BODY */
@@ -385,6 +395,7 @@ nav {
 .trioImageContainer {
     display: flex;
     flex: 1 1 33%;
+    height: 100%;
 }
 
 .trioTextContainer {
@@ -533,30 +544,61 @@ that would be so cool
 /* desktop */
 @media only screen
 and (min-width : 1200) {
-
+    .rightSideAppear  {
+        display: none;
+        h2{
+            display: none;
+        }
+    }
 
 }
 
 /* tablet landscape */
 @media screen and (min-width: 1024px) and (max-width: 1600px)  {
+    .rightSideAppear  {
+        display: none;
+        h2{
+            display: none;
+        }
+    }
+
 
 }
 
 /* tablet portrait */
 @media screen and (min-width: 768px) and (max-width: 1023px)  {
-
+    .rightSideAppear  {
+        display: none;
+        h2{
+            display: none;
+        }
+    }
 }
 
 /* smartphone landscape */
 @media screen and (min-width: 480px) and (max-width: 767px)  {
 
-    .nav-items {
+    .split {
+    flex-wrap: wrap;
+    }
+
+    .headline {
+        display: none;
+    }
+
+    .contentSection {
+        flex-direction: column;
+    }
+
+    /* .nav-items {
         display: none;}
-    
-    .hidden {
+     */
+
+
+    /* .hidden {
         display: inline-block;
         position: sticky;
-    }
+    } */
 
     .article {
         display: inline-block;
@@ -565,12 +607,32 @@ and (min-width : 1200) {
     .article-head {
         margin: 0;
     }
+
+    .rightSideDisppear{
+        display: none;
+        h2{
+            display: none;
+        }
+    }
+
+    .rightSideAppear  {
+        h2{
+        padding-left: 0;
+        }
+    }
 }
 
 
 
 /* smartphone portrait */
 @media screen and (max-width: 479px) {
+    .split {
+        flex-wrap: wrap;
+        }
+
+    .contentSection { 
+        flex-direction: column;
+    }
 
     .nav-items {
         display: none;}
@@ -595,7 +657,6 @@ and (min-width : 1200) {
         text-align: left; 
     }
 
-    /*  TO DO:Text will be in puzzle Image, but until then..*/
     .article-head-container {
     display: inline-flex;
     justify-content: space-around;
@@ -608,6 +669,19 @@ and (min-width : 1200) {
     .title-img {
         display: flex;
         width: 5em;
+    }
+
+    .rightSideDisppear{
+        display: none;
+        h2{
+            display: none;
+        }
+    }
+
+    .rightSideAppear  {
+        h2{
+        padding-left: 0;
+        }
     }
 }
 
